@@ -1,0 +1,44 @@
+FUNCTION dot(a:array, b:array, sum:INTEGER)
+VAR
+    i:integer ;
+BEGIN
+
+    FOR i FROM 0 TO a.length STEP 1   DO
+        sum+=a[i]*b[i];
+    END_FOR
+    RETURN sum ;
+END
+
+ALGORITHM dot
+VAR
+    a :array of INTEGER ;
+    b :array of INTEGER ;
+    sum:INTEGER :=0;
+    n :INTEGER;
+BEGIN
+REPEAT 
+    write("enter vector number of element");
+    read(n);
+UNTIL (n>0)
+FOR i FROM 0 TO n STEP 1  DO
+    REPEAT
+        write ("enter a vector value")
+        read (a[i])
+    UNTIL (a[i]=Isinteger())
+    
+END_FOR
+FOR i FROM 0 TO n STEP 1  DO
+    REPEAT
+        write ("enter a vector value")
+        read (a[i])
+    UNTIL (a[i]=Isinteger())
+    
+END_FOR
+sum:=dot(a,b,sum);
+    IF (sum=0)  THEN
+    write("orthogonal vectors");
+    else
+        write ("non orthogonal vectors");
+    
+    END_IF 
+END
